@@ -23,7 +23,7 @@ public class BookCargo extends ProjectWrappers {
 
 	@BeforeSuite
 	public void setSheetName() {
-		dataSheetName = "Cargo";
+		dataSheetName = "BookCargo";
 	}
 
 	@Test(dataProvider = "fetchData")

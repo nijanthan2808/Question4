@@ -34,11 +34,11 @@ public class TrackingPage extends ProjectWrappers {
 	}
 	
 	public TrackingPage clickTrack() throws InterruptedException {
-		click("id", prop.getProperty("Tracking.Track"));
+		click("id", prop.getProperty("Tracking.TrackButton"));
 		return this;
 	}
 	public TrackingPage getTrackingStatus() throws InterruptedException {
-		currentStatus = getTextById( prop.getProperty("Tracking.Status"));
+		currentStatus = getTextById( prop.getProperty("Tracking.CurrentStatus"));
 		
 		return this;
 	}

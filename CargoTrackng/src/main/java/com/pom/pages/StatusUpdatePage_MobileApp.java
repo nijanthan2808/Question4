@@ -24,12 +24,12 @@ public class StatusUpdatePage_MobileApp extends ProjectWrappers {
 	}
 	
 	public StatusUpdatePage_MobileApp clickGetStatus() throws InterruptedException {
-		click("id", prop.getProperty("Status.GetStatus"));
+		click("id", prop.getProperty("Status.GetStatusButton"));
 		return this;
 	}
 	
 	public StatusUpdatePage_MobileApp clickUpdateStatus() throws InterruptedException {
-		click("id", prop.getProperty("Status.UpdateStatus"));
+		click("id", prop.getProperty("Status.UpdateStatusButton"));
 		return this;
 	}
 	
