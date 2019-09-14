@@ -7,6 +7,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 
 public class TrackingPage extends ProjectWrappers {
 
+	String currentStatus;
 	public TrackingPage(RemoteWebDriver driver, ExtentTest test) throws InterruptedException {
 		this.driver = driver;
 		this.test = test;
@@ -23,6 +24,10 @@ public class TrackingPage extends ProjectWrappers {
 		return this;
 	}
 
+	public TrackingPage writeTrackingNumber() throws InterruptedException {
+		//code to write the created tracking id in Mobile app data sheet.
+		return this;
+	}
 	public TrackingPage enterTrackingNumber(String trackingNumber) throws InterruptedException {
 		enter("id", prop.getProperty("Tracking.EnterTrackingNumber"), trackingNumber);
 		return this;
@@ -33,8 +38,15 @@ public class TrackingPage extends ProjectWrappers {
 		return this;
 	}
 	public TrackingPage getTrackingStatus() throws InterruptedException {
-		getTextById( prop.getProperty("Tracking.Status"));
+		currentStatus = getTextById( prop.getProperty("Tracking.Status"));
+		
 		return this;
 	}
-
+	public TrackingPage verifytTrackingStatus() throws InterruptedException {
+		
+		if(prop.getProperty("Track.StatusFromMobile").equals(currentStatus)) {
+			System.out.println("Tracking status has been updated in web and mobile apps. And its been verified");
+		}
+		return this;
+	}
 }

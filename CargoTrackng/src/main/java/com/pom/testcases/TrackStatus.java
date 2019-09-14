@@ -36,7 +36,7 @@ public class TrackStatus extends ProjectWrappers {
 		ATUReports.setWebDriver(driver);
 		ATUReports.setTestCaseReqCoverage("Test case for Cargo Status tracking in web application");
 
-		new TrackingPage(driver, test).enterTrackingNumber(trackingNumber).clickTrack().getTrackingStatus();
+		new TrackingPage(driver, test).enterTrackingNumber(trackingNumber).clickTrack().getTrackingStatus().verifytTrackingStatus();
 	}
 
 }

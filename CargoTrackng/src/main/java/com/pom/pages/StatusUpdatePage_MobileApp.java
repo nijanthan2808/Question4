@@ -38,4 +38,8 @@ public class StatusUpdatePage_MobileApp extends ProjectWrappers {
 		return this;
 	}
 
+	public StatusUpdatePage_MobileApp writeTrackingStatus() throws InterruptedException {
+		//code to write updated tracking status to web app data sheet.
+		return this;
+	}
 }

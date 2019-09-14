@@ -37,7 +37,7 @@ public class BookCargo extends ProjectWrappers {
 
 		new BokingPage(driver, test).enterOrigin(origin).enterDestination(destination).enterItemDetails(itemDetails)
 				.enterFromAddress(fromAddress).enterToAddress(toAddress).enterCharge(charge)
-				.enterSenderPhone(senderPhone).enterReceiverPhone(receiverPhone).clickBook().getTrackingNumber();
+				.enterSenderPhone(senderPhone).enterReceiverPhone(receiverPhone).clickBook().getTrackingNumber().writeTrackingNumber();
 
 	}
 

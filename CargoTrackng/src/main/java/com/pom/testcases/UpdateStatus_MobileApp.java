@@ -36,7 +36,7 @@ public class UpdateStatus_MobileApp extends ProjectWrappers {
 		ATUReports.setTestCaseReqCoverage("Test case for Cargo mobile app");
 
 		new StatusUpdatePage_MobileApp(driver, test).enterTrackingNumber(trackingNumber).clickGetStatus()
-				.clickUpdateStatus().getTrackingStatus();
+				.clickUpdateStatus().getTrackingStatus().writeTrackingStatus();
 	}
 
 }
